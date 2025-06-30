@@ -148,7 +148,7 @@ The application tracks various user interactions:
 
 ### Dashboard Analytics
 
-**[Screenshot Placeholder: Analytics Dashboard Overview]**
+![Screenshot from 2025-06-30 14-05-11](https://github.com/user-attachments/assets/fc26915c-7885-479f-8ed0-1cd4b565e1ad)
 
 The analytics dashboard provides:
 
@@ -157,10 +157,6 @@ The analytics dashboard provides:
 - **Element Analysis**: Most interacted HTML elements
 - **Timeline Visualization**: User activity patterns over time
 - **Recent Activity**: Real-time event monitoring
-
-**[Screenshot Placeholder: Component Clicks Bar Chart]**
-
-**[Screenshot Placeholder: Element Distribution Pie Chart]**
 
 ## 🎯 Use Cases & Applications
 
@@ -216,19 +212,17 @@ The collected data supports various business decisions:
 
 ### Hero Component
 
-**[Screenshot Placeholder: Hero Section with Call-to-Action Buttons]**
+![Screenshot from 2025-06-30 14-08-08](https://github.com/user-attachments/assets/20fb1521-1999-461e-9b5e-c96dec8db123)
 
 Tracks user interactions with primary call-to-action elements and measures engagement with key value propositions.
 
 ### Features Cards
 
-**[Screenshot Placeholder: Feature Cards Grid Layout]**
+![Screenshot from 2025-06-30 14-08-08](https://github.com/user-attachments/assets/65ea299c-2ef7-4d55-85a3-e7ede380f368)
 
 Individual tracking for each feature card, enabling comparison of feature interest and user preferences.
 
 ### Footer Navigation
-
-**[Screenshot Placeholder: Footer with Navigation Links]**
 
 Monitors navigation patterns and identifies most accessed secondary pages.
 
@@ -236,7 +230,7 @@ Monitors navigation patterns and identifies most accessed secondary pages.
 
 ### Real-time Metrics
 
-**[Screenshot Placeholder: Live Metrics Cards]**
+![Screenshot from 2025-06-30 14-09-44](https://github.com/user-attachments/assets/3eee4d06-6118-4b54-9b43-8449b0447f21)
 
 - **Total Events**: Cumulative user interactions
 - **Click Tracking**: Specific click event monitoring
@@ -245,7 +239,7 @@ Monitors navigation patterns and identifies most accessed secondary pages.
 
 ### Visual Analytics
 
-**[Screenshot Placeholder: Timeline Chart showing activity over 7 days]**
+![image](https://github.com/user-attachments/assets/03f7bd60-5b6d-4daa-b356-76b931275b89)
 
 - **Activity Timeline**: User engagement patterns over time
 - **Component Comparison**: Performance metrics across different UI elements
@@ -305,7 +299,5 @@ This project demonstrates proficiency in:
 - **Multi-tenant Support**: Organization-level data separation
 
 ---
-
-**[Screenshot Placeholder: Complete Application Overview]**
 
 This project showcases the practical application of modern web development technologies in creating enterprise-level analytics solutions, demonstrating both technical proficiency and understanding of business intelligence requirements.

@@ -214,11 +214,6 @@ const AnalyticsDashboard = () => {
                   outerRadius={80}
                   fill="#3b82f6"
                   dataKey="clicks"
-                  labelStyle={{
-                    fill: "#1f2937",
-                    fontSize: "12px",
-                    fontWeight: "bold",
-                  }}
                 >
                   {elementData.map((entry, index) => (
                     <Cell

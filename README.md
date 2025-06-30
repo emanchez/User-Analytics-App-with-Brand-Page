@@ -47,9 +47,9 @@ This application captures detailed user interactions across a Next.js frontend a
 user-analytics/
 ├── src/                       # React/Next.js code
 │   ├── app/
-│   │   ├── page.tsx           # Main application page
+│   │   ├── page.tsx           # Template brand page
 │   │   └── analytics/
-│   │       └── page.tsx       # Analytics dashboard page
+│   │       └── page.tsx       # Analytics app dashboard
 │   ├── components/
 │   │   ├── Header.tsx         # Header component
 │   │   ├── Hero.tsx           # Hero section with tracking

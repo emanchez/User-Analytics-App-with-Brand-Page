@@ -5,13 +5,42 @@ import { useRef } from "react";
 
 const Hero = () => {
   const heroRef = useRef<HTMLElement>(null);
+
   useEventListener(
     "click",
     (e: any) => {
-      console.log("Clicked element in hero: ", e.target.localName);
+      // Use DEBUG_SESSION from env or generate a fallback
+      const sessionId =
+        process.env.NEXT_PUBLIC_DEBUG_SESSION ||
+        `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
+      // Compose the JSON object
+      const eventData = {
+        event_type: "click",
+        element: e.target.localName,
+        component: "Hero",
+        user_session: sessionId,
+      };
+
+      console.log("Event data:", eventData);
+      const sendData = async () => {
+        try {
+          const response = await fetch("http://localhost:5000/events", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(eventData),
+          });
+          const data = await response.json();
+          console.log("API Response:", data);
+        } catch (error) {
+          console.error("Failed to send data:", error);
+        }
+      };
+      sendData();
     },
-    heroRef // Pass the ref itself, not ref.current
+    heroRef
   );
+
   return (
     <section
       ref={heroRef}

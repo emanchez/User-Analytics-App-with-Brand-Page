@@ -1,14 +1,16 @@
 # User Analytics Tracking Application
 
-A comprehensive full-stack analytics platform that demonstrates advanced user behavior tracking, data collection, and visualization capabilities. This project showcases the transformation of an e-commerce template into a sophisticated analytics system for A/B testing and user experience optimization.
+A small full-stack event-tracking demo: a Next.js frontend that records user interactions, a Flask API that stores them in SQLite, and a dashboard that charts them. It started as an e-commerce landing-page template, and I instrumented it with a custom tracking hook.
+
+**Status:** built in June 2025 as a learning project. It is a development demo, not a production system: SQLite, no authentication, and the dashboard calls the API at a hard-coded `http://localhost:5000`. A/B testing (variant assignment and experiment analysis) is **planned, not implemented**; see [Planned: A/B testing](#planned-ab-testing).
 
 ## 📊 Project Overview
 
-This application captures detailed user interactions across a Next.js frontend and stores them in a Flask/SQLAlchemy backend for analysis. The system provides real-time analytics dashboards and demonstrates enterprise-level data collection patterns used in modern web applications.
+This application captures click interactions across a Next.js frontend and stores them in a Flask/SQLAlchemy backend. The dashboard reads them back and refreshes every 30 seconds.
 
 ### Key Features
 
-- **Real-time Event Tracking**: Captures clicks, interactions, and user behavior across all components
+- **Event Tracking**: Captures clicks, interactions, and user behavior across all components
 - **Custom Analytics Dashboard**: Comprehensive visualization of user engagement metrics
 - **Component-level Tracking**: Granular data collection from individual UI components
 - **Session Management**: User session tracking for behavioral analysis
@@ -156,22 +158,17 @@ The analytics dashboard provides:
 - **Component Performance**: Click distribution across different components
 - **Element Analysis**: Most interacted HTML elements
 - **Timeline Visualization**: User activity patterns over time
-- **Recent Activity**: Real-time event monitoring
+- **Recent Activity**: Latest events, auto-refreshed every 30 seconds
 
 ## 🎯 Use Cases & Applications
 
-### A/B Testing Scenarios
+### Planned: A/B testing
 
-This tracking system enables sophisticated A/B testing:
-
-- **Component Performance**: Compare engagement between different UI variations
-- **User Flow Analysis**: Identify optimal user journey paths
-- **Conversion Tracking**: Monitor user actions leading to desired outcomes
-- **Heat Map Generation**: Understand which areas receive most interaction
+The event data is meant to be a foundation for A/B testing, but none of the experiment layer exists yet. Not implemented: variant assignment, experiment/variant tables, exposure logging, and any statistical comparison of variants. What exists today is the click-event capture and per-component counts that such a layer would build on.
 
 ### Business Intelligence
 
-The collected data supports various business decisions:
+Possible uses of the collected data:
 
 - **UX Optimization**: Identify poorly performing interface elements
 - **Content Strategy**: Understand which content resonates with users
@@ -228,7 +225,7 @@ Monitors navigation patterns and identifies most accessed secondary pages.
 
 ## 📈 Analytics Dashboard Deep Dive
 
-### Real-time Metrics
+### Metrics
 
 ![Screenshot from 2025-06-30 14-09-44](https://github.com/user-attachments/assets/3eee4d06-6118-4b54-9b43-8449b0447f21)
 
@@ -244,7 +241,6 @@ Monitors navigation patterns and identifies most accessed secondary pages.
 - **Activity Timeline**: User engagement patterns over time
 - **Component Comparison**: Performance metrics across different UI elements
 - **Element Distribution**: Most frequently interacted elements
-- **Session Duration**: Average user engagement time
 
 ## 🔒 Data Privacy & Security
 
@@ -285,7 +281,7 @@ This project demonstrates proficiency in:
 ## 📊 Technical Achievements
 
 - **Custom Event Tracking System**: Built from scratch without external analytics libraries
-- **Real-time Data Flow**: Seamless frontend-to-backend data pipeline
+- **Frontend-to-backend data flow**: events are POSTed to the Flask API and read back by the dashboard (polled every 30 seconds)
 - **Responsive Dashboard**: Mobile-friendly analytics interface
 - **Type-safe Development**: Full TypeScript implementation
 - **Component Architecture**: Reusable, trackable UI components
@@ -300,4 +296,4 @@ This project demonstrates proficiency in:
 
 ---
 
-This project showcases the practical application of modern web development technologies in creating enterprise-level analytics solutions, demonstrating both technical proficiency and understanding of business intelligence requirements.
+This project showcases the practical application of modern web development technologies in creating a small event-analytics tool, demonstrating both technical proficiency and understanding of business intelligence requirements.

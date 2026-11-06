@@ -41,3 +41,7 @@ yarn-error.log*
 next-env.d.ts
 __pycache__/
 *.pyc
+
+# Local virtualenv and generated database
+backend/flask-app/
+backend/*.db

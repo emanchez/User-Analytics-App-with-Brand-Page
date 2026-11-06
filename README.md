@@ -123,7 +123,7 @@ user-analytics/
 3. **Install Python dependencies**:
 
    ```bash
-   pip install flask flask-cors flask-sqlalchemy
+   pip install -r requirements.txt
    ```
 
 4. **Start the Flask server**:
